@@ -1,0 +1,59 @@
+﻿<Window x:Class="GCFriendsScore.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:GCFriendsScore"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="1323">
+    <TabControl>
+        <TabItem>
+            <StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <!--Cabecalho-->
+                    <Label Content=" Nome" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" KDA" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" ADR" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" Matou" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" Morreu" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" KAST" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" MultiKills" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" FirstKills" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" Clutches" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content=" HS%" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content="Precisão" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content="BombasPlan" Width="80" HorizontalContentAlignment="Center"/>
+                    <Label Content="BombasDef" Width="80" HorizontalContentAlignment="Center"/>
+                    <Button Margin="5,0" Content="Atualizar Telas" Click="btnAtualizar"/>
+                    <Button Margin="5,0" Content="Atualizar Dados" Click="btnAtualizarDados"/>
+                    <Button Margin="5,0" Content="Teste" Visibility="Visible" Click="btnTeste"/>
+                </StackPanel>
+                <ScrollViewer Margin="0,0" Height="371">
+                    <StackPanel x:Name="PainelUsuarios">
+                        <!--Painel--><StackPanel x:Name="PainelUsuarios2"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </TabItem>
+        <TabItem>
+            <StackPanel x:Name="Amigos">
+                <!--Painel-->
+                <StackPanel Orientation="Horizontal">
+                    <!--Cabecalho-->
+                    <Label Content=" Id" Width="100" HorizontalContentAlignment="Center"/>
+                    <Label Content=" Nome" Width="100" HorizontalContentAlignment="Center"/>
+                    <Button Margin="10,0" Content="Novo" Click="btnNovoAmigo"/>
+                    <Label Content=" Id" Width="25" HorizontalContentAlignment="Left"/>
+                    <TextBox x:Name="inputId" Width="100" Height="20"/>
+                    <Label Content=" Nome:" Width="47" HorizontalContentAlignment="Center"/>
+                    <TextBox x:Name="inputNome" Width="100" Height="20"/>
+                </StackPanel>
+                <ScrollViewer Margin="0,0" Height="371">
+                    <StackPanel x:Name="PainelAmigos">
+                        <!--Painel-->
+                    </StackPanel>
+                </ScrollViewer>
+            </StackPanel>
+        </TabItem>
+    </TabControl>
+</Window>
