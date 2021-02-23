@@ -91,8 +91,6 @@ namespace GCFriendsScore
             verificarDrive();
         }
 
-
-
         public void Logar(string Id)
         {
             driver = new ChromeDriver(Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location));
@@ -101,8 +99,9 @@ namespace GCFriendsScore
             driver.Navigate().GoToUrl("https://gamersclub.com.br/jogador/" + Id);
 
             driver.Manage().Window.Maximize();
+            
+            IWebElement btnEntrar = driver.FindElement(By.XPath("/html/body/div[2]/div[2]/div/section/form/div[4]/a"));
 
-            IWebElement btnEntrar = driver.FindElement(By.XPath("//*[@id='gcForm']/div[5]/div[2]/a"));
             btnEntrar.Click();
 
             Thread.Sleep(5000);
